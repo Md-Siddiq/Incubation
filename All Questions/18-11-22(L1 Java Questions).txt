@@ -1,0 +1,66 @@
+public static void main(String[] args) {
+		int bits;
+		
+		bits=-3>>1;
+		bits=bits>>>2;
+		bits=bits<<1;
+		System.out.println(bits);
+	}
+
+Ans = 2147483646
+
+___________________________________________________________________________________________________________________
+
+public static void main(String[] args) {
+		String obj="abcdef";
+		int length=obj.length();
+		char c[]=new char[length];
+		obj.getChars(0,length,c,0);
+	    CharArrayReader io_1=new CharArrayReader(c);
+	    CharArrayReader io_2=new CharArrayReader(c,0,3);
+	    int i;
+	    try{
+	    	
+	    	while((i=io_2.read())!=-1)
+	    	{
+	    		
+	    		System.out.println((char)i);
+	    	}
+	    }
+	    catch(IOException e){
+	    	e.printStackTrace();
+	    }
+	}
+
+Ans = abc  
+
+__________________________________________________________________________________________________________________
+
+
+public class NumberPalin {
+	
+	public static void main(String[] args) {
+		String obj="abcdef";
+		int length=obj.length();
+		char c[]=new char[length];
+		obj.getChars(0,length,c,0);
+	    CharArrayReader io_1=new CharArrayReader(c);
+	    CharArrayReader io_2=new CharArrayReader(c,1,4);
+	    int i,j;
+	    try{
+	    	while((i=io_1.read())==(j=io_2.read()))
+	    	{
+	    		
+	    		System.out.println((char)i);
+	    	}
+	    }
+	    catch(IOException e){
+	    	e.printStackTrace();
+	    }
+	}
+	
+}
+
+Ans = No Output
+
+
